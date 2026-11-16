@@ -305,7 +305,9 @@ export function createScene(canvas: HTMLCanvasElement, reduced: boolean): Scene 
 
   function frame() {
     if (!visible || !running) return;
-    const dt = Math.min(clock.getDelta(), 0.05);
+    const real = Math.min(clock.getDelta(), 0.05);
+    // reduced motion: keep the backdrop alive but slow and gentle
+    const dt = reduced ? real * 0.35 : real;
     uniforms.uTime.value += dt;
 
     ptr.lerp(ndc, 0.06);
@@ -329,7 +331,7 @@ export function createScene(canvas: HTMLCanvasElement, reduced: boolean): Scene 
     // drop detail once if the machine cannot hold a decent frame rate
     if (!checked) {
       frames++;
-      acc += dt;
+      acc += real;
       if (acc > 2.5) {
         checked = true;
         if (frames / acc < 34) {
@@ -342,17 +344,12 @@ export function createScene(canvas: HTMLCanvasElement, reduced: boolean): Scene 
         }
       }
     }
-    if (!reduced) requestAnimationFrame(frame);
+    requestAnimationFrame(frame);
   }
 
   gsap.to(uniforms.uOpacity, { value: small ? 0.6 : 0.8, duration: 2.2, delay: 0.2, ease: 'power2.out' });
-  if (reduced) {
-    // one still frame per change, no continuous motion
-    uniforms.uOpacity.value = 0.5;
-    frame();
-  } else {
-    requestAnimationFrame(frame);
-  }
+  if (reduced) uniforms.uOpacity.value = 0.5;
+  requestAnimationFrame(frame);
 
   canvas.addEventListener('webglcontextlost', (e) => {
     e.preventDefault();
@@ -366,7 +363,6 @@ export function createScene(canvas: HTMLCanvasElement, reduced: boolean): Scene 
       if (reduced) {
         uniforms.uShape.value = shape;
         group.position.x = tx;
-        frame();
         return;
       }
       gsap.to(uniforms.uShape, { value: shape, duration: 1.9, ease: 'power2.inOut', overwrite: true });
