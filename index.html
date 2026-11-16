@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Maurya — AI/ML systems &amp; backend engineer</title>
+    <meta
+      name="description"
+      content="Ayush Maurya builds AI/ML systems and high-performance backends. IIT Patna, two-time DD Robocon national finalist, Inter IIT Tech Meet, NJACK ML Club coordinator."
+    />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta property="og:title" content="Ayush Maurya — AI/ML systems & backend engineer" />
+    <meta
+      property="og:description"
+      content="Agent harnesses, retrieval systems, distributed backends and robots. Selected work, writing and contact."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div id="loader" aria-hidden="true">
+      <div class="loader-top mono"><span>Ayush Maurya</span><span>Portfolio ©2026</span></div>
+      <div class="loader-count"><span id="loader-num">0</span><i>%</i></div>
+      <div class="loader-bar"><b id="loader-fill"></b></div>
+    </div>
+
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div id="cursor" aria-hidden="true"><span></span></div>
+
+    <header class="nav">
+      <a class="logo" href="#top" aria-label="Ayush Maurya, back to top">AM<sup>©</sup></a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#journey">Journey</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="status mono" href="#contact"><i></i>Open to internships</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" data-shape="0" data-x="1.9">
+        <p class="mono hero-kicker reveal">AI/ML systems · Backend infrastructure · Robotics</p>
+        <h1 class="display" aria-label="Ayush Maurya">
+          <span class="line"><span>Ayush</span></span>
+          <span class="line"><span>Maurya<em>.</em></span></span>
+        </h1>
+        <div class="hero-foot">
+          <p class="lede reveal">
+            I build the systems around the model: agent harnesses with memory and tracing, retrieval engines that cite
+            their sources, and the Go backends that keep them fast. Undergraduate at IIT Patna, two-time DD Robocon
+            national finalist and coordinator of the NJACK ML Club.
+          </p>
+          <div class="hero-meta mono reveal">
+            <span>Patna, India</span>
+            <span id="clock">--:-- IST</span>
+            <a href="#work" class="scroll-hint">Scroll <b>↓</b></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+      <section id="about" class="about" data-shape="1" data-x="-2.3">
+        <div class="col-r">
+          <p class="mono label">01 — About</p>
+          <p class="statement" id="statement">
+            I bridge the gap between autonomous deep learning systems and high-performance backend pipelines. That means
+            training models, then building what lets them survive production: memory, tracing, evaluation and
+            infrastructure that stays up.
+          </p>
+          <div class="about-grid">
+            <p>
+              I am a B.Tech student at the Indian Institute of Technology Patna, class of 2028. My degree is in Chemical
+              Science and Technology. My time goes to machine learning, distributed systems and robots.
+            </p>
+            <p>
+              I coordinate the NJACK ML Club, manage its Substack magazine The Learning Curve, and have twice reached
+              the DD Robocon national finals with IIT Patna’s robotics team.
+            </p>
+          </div>
+          <ul class="stats">
+            <li><b data-count="2">0</b><span>DD Robocon national finals</span></li>
+            <li><b data-count="20" data-prefix="Top ">0</b><span>Worldwide, Silicon Labs IoT Challenge</span></li>
+            <li><b data-count="8" data-suffix="th">0</b><span>Inter IIT Tech Meet 14.0</span></li>
+            <li><b data-count="100" data-suffix="+">0</b><span>Students trained at NJACK</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="work" class="work" data-shape="2" data-x="2.6">
+        <div class="section-head">
+          <p class="mono label">02 — Selected systems</p>
+          <h2 class="display-2">Things I<br />have built</h2>
+        </div>
+        <ol class="projects" id="projects"></ol>
+        <a class="more mono" href="https://github.com/6sLOGAN78?tab=repositories" target="_blank" rel="noopener" data-cursor
+          >All repositories on GitHub <b>↗</b></a
+        >
+      </section>
+
+      <section id="journey" class="journey" data-shape="3" data-x="2.4">
+        <div class="section-head">
+          <p class="mono label">03 — Journey</p>
+          <h2 class="display-2">Arenas &amp;<br />all-nighters</h2>
+        </div>
+        <div class="cards" id="journey-cards"></div>
+      </section>
+
+      <section id="writing" class="writing" data-shape="4" data-x="0">
+        <div class="section-head">
+          <p class="mono label">04 — Writing</p>
+          <h2 class="display-2">The Learning<br />Curve</h2>
+        </div>
+        <div class="writing-grid">
+          <div>
+            <p class="lede">
+              I manage The Learning Curve, the tech magazine written by students of NJACK, the computing club of IIT
+              Patna. We publish on Substack: machine learning, systems, and what it is like to learn both at once.
+            </p>
+            <a
+              class="feature"
+              href="https://thelearningcurvenjack.substack.com/p/robotics-step-one"
+              target="_blank"
+              rel="noopener"
+              data-cursor
+            >
+              <span class="mono">My essay · Jan 2026</span>
+              <strong>Robotics, Step One</strong>
+              <span class="feature-sub">Where to begin when a pile of parts starts looking like a robot.</span>
+              <b class="arrow">↗</b>
+            </a>
+            <a class="btn" href="https://thelearningcurvenjack.substack.com/subscribe" target="_blank" rel="noopener" data-cursor
+              >Subscribe on Substack</a
+            >
+          </div>
+          <div>
+            <p class="mono label">Recently in the magazine</p>
+            <ul class="posts" id="posts"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="stack" data-shape="4" data-x="0">
+        <div class="section-head">
+          <p class="mono label">05 — Stack</p>
+        </div>
+        <div class="stack-grid" id="stack-grid"></div>
+      </section>
+
+      <section id="contact" class="contact" data-shape="5" data-x="0">
+        <p class="mono label">06 — Contact</p>
+        <h2 class="display contact-title">
+          <span class="line"><span>Let’s build</span></span>
+          <span class="line"><span>something<em>.</em></span></span>
+        </h2>
+        <p class="lede">
+          I am looking for internships in AI/ML and backend engineering. If you have a hard problem, or a robot that
+          will not behave, write to me.
+        </p>
+        <div class="contact-row">
+          <button class="email" id="email" type="button" data-cursor>
+            <span id="email-text">mauryaayush8114@gmail.com</span>
+            <i class="mono" id="email-hint">Click to copy</i>
+          </button>
+        </div>
+        <ul class="links mono">
+          <li><a href="https://github.com/6sLOGAN78" target="_blank" rel="noopener" data-cursor>GitHub ↗</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/ayush-maurya-5a8308339" target="_blank" rel="noopener" data-cursor
+              >LinkedIn ↗</a
+            >
+          </li>
+          <li>
+            <a href="https://thelearningcurvenjack.substack.com" target="_blank" rel="noopener" data-cursor>Substack ↗</a>
+          </li>
+          <li><a href="mailto:mauryaayush8114@gmail.com" data-cursor>Email ↗</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer mono">
+      <span>© 2026 Ayush Maurya</span>
+      <span>Built with three.js · Hosted on Cloudflare</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
